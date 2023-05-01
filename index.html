@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>食世求視</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css'><link rel="stylesheet" href="./style.css">
+
+<script type="text/javascript">
+  window.onload = function(){
+            //toggleSound();
+           setInterval("toggleSound()",1);
+      }
+
+  function toggleSound() {
+              var music = document.getElementById("vd");//獲取ID  
+                  
+              if (music.paused) { //判讀是否播放  
+                  music.paused=false;
+                  music.play(); //沒有就播放 
+              }    
+      }
+</script>
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<audio preload autoplay loop id="vd">
+  <source src="music\music.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+  <div class="header-top clearfix">
+    <h1 class="l-left"><a href="#firstSection"><img src="image\logo.png" alt=""></a></h1>
+    <h6 class="ll-left"><img src="image\logo2.png" alt="" width="300px" height="400px"></h6>
+    <a class="l-right toggle-menu" href="#">
+      <i></i>
+      <i></i>
+      <i></i>
+    </a>
+  </div>
+
+  <nav class="hide">
+    <ul id="menu">
+      <li data-menuanchor="firstSection">
+        <a href="#firstSection" title="First Section">食世求視</a>
+      </li>
+      <li data-menuanchor="secondSection">
+        <a href="#secondSection" title="Second Section">什麼是塑化劑</a>
+      </li>
+      <li data-menuanchor="thirdSection">
+        <a href="#thirdSection" title="Second Section">生活中的塑化劑</a>
+      </li>
+      <li data-menuanchor="fourthSection">
+        <a href="#fourthSection" title="Fourth Section">塑膠製品的差異</a>
+      </li>
+      <li data-menuanchor="fifthSection">
+        <a href="#fifthSection" title="First Slide">如何避免塑化劑</a>
+      </li>
+      <li data-menuanchor="fifthSection/1">
+        <a href="#fifthSection/1" title="Second Slide">食安迷宮</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!--第一頁-->
+
+<div id="fullpage">
+  <section class="vertical-scrolling">
+    <div class="video" hight="722px" wight="1280px">
+      <video autoplay loop muted>
+        <source src="VIDEO\PIXAR.mp4"  type="video/mp4" >
+        
+      </video>
+    </div>
+    <div class="scroll-icon">
+      <p>食安迷宮教材趣</p>
+      <a href="#fifthSection/1" class="icon-up-open-big"></a>
+    </div>
+  </section>
+
+<!--第二頁-->
+
+  <section class="vertical-scrolling">
+    <img src="image\資產 2.png"class="model" width="613" height="700" style="position:relative ;left: 55px;top: 20px;float: left;">
+
+    <div class="botton">
+      <a href="#" class="btn1"style="position:relative ;left: 280px;top:20px">塑化劑是什麼</a>
+      <div class="page01" id="level01">
+        <div class="panel_title"><img src="image\1x\使柔軟.png"width="250" height="150"style="position:relative ;left: 10px;float: left;"></div>
+        <p class="what" style="text-align:left;line-height:150%;position:relative ;left: 30px;top: 10px">
+          塑化劑到底是什麼?<br/>
+          塑化劑是內分泌干擾素的一種<br/>
+          可以讓質地堅硬的PVC、PVDC塑膠變得比較柔軟<br/>
+          <br/>
+        </p>
+        <p class="what01" style="text-align:left;line-height:150%;position:relative ;left: 10px;top: 130px">
+          內分泌干擾素又是什麼呢?<br/>
+          內分泌干擾素也被稱作環境荷爾蒙<br/>
+          環境荷爾蒙可以模擬成人體內的天然荷爾蒙<br/>
+          干擾荷爾蒙作用<br/>
+          進而影響生理調節機能<br/>
+          除了塑化劑以外<br/>
+          重金屬、農藥、人造化學物質等也是常見的內分泌干擾素種類<br/>
+        </p>
+        <div class="panel_phtoto"><img src="image\1x\塑化劑化學式.png"width="300" height="200"style="position:relative ;left: 0px;top: -230px;float: right;"></div>
+        <div class="x_btn"><img src="image\1x\close.png"></div>
+    </div>
+<div class="card"style="position:relative ;left: -300px;top: 350px;">
+  <div class="cover">
+    <img src="image\1x\card01.png"width="271" height="378" >
+  </div>
+  <div class="back">
+    <img src="image\1x\card01-b.png" width="271" height="378">
+  </div>
+ 
+</div>
+
+<div class="card01"style="position:relative ;left: -225px;top: 350px;">
+  <div class="cover01">
+    <img src="image\1x\card02-03.png"width="271" height="378" >
+  </div>
+  <div class="back01">
+    <img src="image\1x\card02-b-03.png" width="271" height="378">
+  </div>
+ 
+</div>
+
+<div class="card02"style="position:relative ;left: -150px;top: 350px;">
+  <div class="cover02">
+    <img src="image\1x\card03-03.png"width="271" height="378" >
+  </div>
+  <div class="back02">
+    <img src="image\1x\card03-b-03.png" width="271" height="378">
+  </div>
+ 
+</div>
+</section>
+
+<!--第三頁-->
+
+  <section class="vertical-scrolling">
+  
+  <!--加入背景圖片-->
+  <img src="image\1x\pg2-bg.png" width="100%" height="100%" id="pg2bg"style="position:relative ;left: 0px;top: 100px;">
+
+  
+  <!--設定鼠標感應區塊-->
+  <div class="flash" onmouseover="show1()" onmouseout="noshow1()"></div>
+  <div class="makeup"onmouseover="show2()" onmouseout="noshow2()"></div>
+
+  <!--加入兩張圖片-->
+  <div id="flashimg">
+  <img src="image\1x\flash-04.png">
+  </div>
+  
+  <div id="makeupimg">
+    <img src="image\1x\makeup-04.png">
+    </div>
+    
+
+      
+    <img src="image\1x\資產 42.png"width="280" height="230" class="bubble"style="position:relative ;left: 100px;top: -640px;" />
+    <a href="#" class="point"style="position:relative ;left: -150px;top: -620px;"><img src="image\1x\scard.png"class="point" width="150" height="180"></a>
+    <div class="page02" id="level02" >
+      <p class="why">
+        <h4 style="font-size:23px">為什麼塑膠產品會滲出塑化劑?</h4>
+        塑化劑與塑膠製品的結合，<br/>
+        一旦接觸到熱、酸、油，<br/>
+        塑化劑就可能會從塑膠產品中滲出。<br/>
+      </p>
+      <div class="x_btn02"><img src="image\1x\close.png" width="50" height="50"></div>
+  </div>
+</section>
+
+<!--第四頁-->
+
+  <section class="vertical-scrolling">
+    <div class="botton02">
+      <a href="#" class="btn02"style="position:absolute ;left: 7%;top:50%">塑膠製的東西就代表含有塑化劑嗎</a>
+      <div class="page03" id="level03">
+        <p class="IS" style="text-align:left;line-height:150%;position:relative ;left: 30px;top: 10px">
+          PET、PE、PP材質<br/>
+          已經符合產品的柔軟性需求，<br/>
+          沒有必要浪費成本添加塑化劑，<br/>
+          但使用時仍要注意材質的耐熱溫度。<br/>
+          <br/>
+          餐具建議選用較耐熱的五號PP材質，<br/>
+          不然還是可能有其他化學物質釋出。<br/>
+          <br/>
+          選擇食物容器時，<br/>
+          一定要盡量避免使用三號PVC材質，<br/>
+          因為PVC的製程都會使用塑化劑。<br/>
+        </p>
+        <div class="x_btn03"><img src="image\1x\close.png"></div>
+    </div>
+      <div class="word">
+        <h2 style="color:white;">塑膠製品的差異</h2><br/>
+        <p>塑膠容器大部分都印有三角形的「塑膠材質回收辨識碼」，<br/>
+        數字的不同代表塑膠材質的不同，<br/>
+        了解材質可以幫助我們選購。<br/></p>
+      </div>
+      <div class="img-slider">
+        <div class="slide active">
+          <img src="image\1x\01.png">
+          <div class="info">
+            <h3>
+              1號 PET(聚乙烯對苯二甲酸酯)
+            </h3>
+            <br/>
+            <p>
+              俗稱的寶特瓶，佔塑膠回收品的最大宗，也是我們日常最頻繁購買與使用的種類。
+            </p>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <img src="image\1x\02.png">
+          <div class="info">
+            <h3>
+            2號 HDPE(高密度聚乙烯)
+            </h3>
+            <br/>
+            <p>
+              HDPE具有良好的耐化學性，可與食物接觸，且加工容易，成本低。<br/><br/>
+              材質較PET為厚、硬，在容器上多用來盛裝乳製品、清潔液等。<br/><br/>
+              是一種很堅固又耐熱(可承受90~110度高溫)的塑膠。
+            </p>    
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="image\1x\03.png">
+          <div class="info">
+            <h3>
+            3號 PVC(聚氯乙烯)
+            </h3>
+            <br/>
+            <p>
+              PVC是五大塑膠（PE、PVC、PP、PS、PET）中唯一的含氯塑膠。因為含氯，可藉由添加塑化劑改變產品的柔軟度。<br/><br/>
+              PVC的耐熱度很差，一般製造必須添加安定劑，通常為重金屬，也因此被不少人稱為「毒塑膠」。<br/><br/>
+              PVC用品可見於盛裝洗碗精、漱口水等。
+            </p>    
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="image\1x\04.png">
+          <div class="info">
+            <h3>
+            4號 LDPE(低密度聚乙烯)
+            </h3>
+            <br/>
+            <p>
+              LDPE就是HDPE的柔軟版，也具有良好的耐化學性、同樣可與食物接觸。因此常被拿來製成塑膠袋、保鮮膜等等。<br/><br/>
+              因為低密度的關係，耐熱性也較低，約70~90度左右。
+            </p>    
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="image\1x\05.png">
+          <div class="info">
+            <h3>
+            5號 PP(聚丙烯)
+            </h3>
+            <br/>
+            <p>
+              PP原料外觀為白色顆粒，無味無毒，由於晶體結構完整，具備容易加工、抗沖擊、抗彎曲性以及絕緣性好等優點，在汽車工業、家用電器、電子、包裝及建材家具等方面都被廣泛的應用。
+            </p>    
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="image\1x\06.png">
+          <div class="info">
+            <h3>
+            6號 PS(聚苯乙烯)
+            </h3>
+            <br/>
+            <p>
+              PS就是我們所說的萬年塑膠保麗龍，據說漂到海上的保麗龍，可以活得比海龜還久。<br/><br/>
+              PS的特性就是容易碎裂，若撞擊則會有裂痕，有些飲料商家為了保冰效果，都使用PS當作容器，有些泡麵廠商也會為了耐熱度而選擇使用PS。
+            </p>    
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="image\1x\07.png">
+          <div class="info">
+            <h3>
+            7號 OTHER (其他)
+            </h3>
+            <br/>
+            <p>
+              若非上面6種塑膠的其他塑膠產品，在回收上則是會被歸類到7號，像是米膚的米糠低碳環保瓶NPP。<br/><br/>
+              或是常見的盛裝容器PLA，它的來源其實是玉米、甜菜等植物，萃取出澱粉後，經過發酵與去水，再製成PLA塑膠。
+
+            </p>    
+          </div>
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+
+
+      </div>
+
+
+  </section>
+
+<!--第五頁-->
+
+  <section class="vertical-scrolling">
+    <div class="horizontal-scrolling">
+    <div class="pupu">
+      <h5>如何避免塑化劑</h5></br></br></br></br></br></br></br>
+      <p>落實減塑的自我保護，</br>
+        降低塑化劑的暴露達到自我保護的效果。</br>
+      </br>
+        如果真的不小心吃到塑化劑，</br>
+        大部分的塑化劑會在24到48小時由尿液或糞便排出，</br>
+        但是如果天天暴露，</br>
+        長期累積就會對身體造成危害，</br>
+        最好還是減少使用塑膠產品降低暴露較好。</p>
+      </div>
+
+      <section class="banner">
+
+        <div class="imgBx">
+          <img src="image\1x\no00.png" class="active">
+          <img src="image\1x\no01.png">
+          <img src="image\1x\no02.png">
+          <img src="image\1x\no03.png">
+          <img src="image\1x\no04.png">
+          <img src="image\1x\no05.png">
+          <img src="image\1x\no06.png">
+          <img src="image\1x\no07.png">
+          <img src="image\1x\no08.png">
+        </div>
+        <ul class="controls">
+            <li onclick="PrevSlide();"style="position: absolute; left: -1455px;"></li>
+            <li onclick="nextSlide();"></li>
+        </ul>
+      </section>
+    </div>
+
+    
+    
+
+    <!--第五頁分支-->
+
+    <div class="horizontal-scrolling">
+      <h2>教具介紹</h2>
+      <h3>COMMING SOON...</h3> 
+      <p class="end">Thank you!</p>
+    </div>
+  </section>
+
+
+</div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+
+<script>
+  // HTML元素跳動效果
+  setInterval(function(){
+      $(".model,.point").animate({top:"-=10px"},1000).animate({top:"+=10px"}, 1000)
+    }, 2000)
+  setInterval(function(){
+      $(".bubble").animate({top:"-=15px"},2000).animate({top:"+=15px"}, 2000)
+    }, 4000)
+    // 隱藏燈箱 
+    $('.page01,.page02,.page03').hide()
+    
+    // 打開燈箱 (fadeIn) 
+    $('.btn1').click(function (){
+        $('#level01').fadeIn(500);
+        return false;
+    });
+    $('.point').click(function (){
+        $('#level02').fadeIn(500);
+        return false;
+    });
+    $('.btn02').click(function (){
+        $('#level03').fadeIn(500);
+        return false;
+    });
+    // 關閉燈箱
+    $('.x_btn').click(function (){
+        $('.page01').hide();
+             return false;
+             
+    });
+    $('.x_btn02').click(function (){
+        $('.page02').hide();
+             return false;
+             
+    });
+    $('.x_btn03').click(function (){
+        $('.page03').hide();
+             return false;
+             
+    });
+</script>
+
+
+<script>
+ function show1(){flashimg.style.display="block";}
+ function noshow1(){flashimg.style.display="none";}
+
+ function show2(){makeupimg.style.display="block";}
+ function noshow2(){makeupimg.style.display="none";}
+</script>
+</html>
+
+<script type="text/javascript">
+  var slides = document.querySelectorAll('.slide');
+  var btns = document. querySelectorAll('.btn');
+  let currentSlide = 1;
+
+  var manualNav = function(manual){
+    slides.forEach((slide) =>{
+      slide.classList.remove('active');
+
+      btns.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+    });
+    slides[manual].classList.add('active');
+    btns[manual].classList.add('active');
+  }
+
+  btns.forEach((btn,i) => {
+    btn.addEventListener("click",() => {
+      manualNav(i);
+      currentSlide = i;
+    });
+
+  });
+
+
+var repeat = function(activeClass){
+  let active = document.getElementsByClassName('active');
+  let i = 1;
+
+  var reapeater = () => {
+    setTimeout(function(){
+      [...active].forEach((activeSlide) =>{
+        activeSlide.classList.remove('active');
+      });
+      
+      slides[i].classList.add('active');
+      btns[i].classList.add('active');
+      i++
+
+      if(slides.length==1){
+        i=0;      }
+        if(i>=slides.length){
+          return;
+        }
+        reapeater();
+    },10000);
+  }
+  reapeater();
+  }
+  repeat()
+
+
+</script>
+
+<script type="text/javascript">
+  const imgBx = document.querySelector('.imgBx');
+  const slides02 = imgBx.getElementsByTagName('img');
+  var i = 0;
+  function nextSlide(){
+    slides02[i].classList.remove('active');
+    i = (i + 1) % slides02.length;
+    slides02[i].classList.add('active');
+  }
+  function PrevSlide(){
+    slides02[i].classList.remove('active');
+    i = (i - 1 +slides02.length) % slides02.length;
+    slides02[i].classList.add('active');
+  }
+</script>
+

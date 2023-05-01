@@ -1,0 +1,816 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
+
+
+
+/* ICON STYLES - ICON FROM: http://fontastic.me/
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.eot");
+  src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.eot#iefix") format("embedded-opentype"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.woff") format("woff"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.ttf") format("truetype"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  font-family: "untitled-font-1";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-up-open-big { display: inline-block; }
+
+.icon-up-open-big:after {
+  content: "a";
+  font-size: 2.5em;
+  display: block;
+  transform: rotateX(180deg);
+  color: rgb(255, 255, 255);
+  transition: color .3s;
+}
+
+.icon-up-open-big:hover:after {
+	color: rgb(148, 178, 197);	
+}
+
+.scroll-icon {
+	font-family:"華康粗圓體(P)";
+	position: absolute;
+ 	left: 50%;
+  bottom: 35px;
+  padding: 0 10px;
+  	transform: translateX(-50%);
+	  color: white;
+}
+
+
+
+/* HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.l-left {
+	float: left;
+}
+
+.l-right {
+	float: right;
+}
+
+.end {
+	margin-top: 30px;
+	font-size: 3em;
+	font-weight: bold;
+	opacity: 0;
+	transform: translateY(300px);
+	transition: opacity, transform 1s;
+	transition-delay: 1s;
+}
+
+
+
+/* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Alegreya Sans', Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: black;
+	letter-spacing: .18em;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+
+
+/* NAV STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.header-top {
+	background: rgba(0, 47, 77, .3);
+	height: 70px;
+	padding: 0 10px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+	box-sizing: border-box;
+}
+
+h1 {
+	line-height: 70px;
+	height: 70px;
+}
+
+h1 a {
+	display: block;
+	padding: 0 10px;
+}
+
+.toggle-menu {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+}
+
+.toggle-menu i {
+	position: absolute;
+	display: block;
+	height: 2px;
+	background: white;
+	width: 30px;
+	left: 10px;
+	transition: all .3s;
+}
+
+.toggle-menu i:nth-child(1) {
+	top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+	top: 24px;
+}
+
+.toggle-menu i:nth-child(3) {
+	top: 32px;
+}
+
+.open-menu i:nth-child(1) {
+	top: 25px;
+	transform: rotateZ(45deg);
+}
+
+.open-menu i:nth-child(2) {
+	background: transparent;
+}
+
+.open-menu i:nth-child(3) {
+	top: 25px;
+	transform: rotateZ(-45deg);
+}
+
+nav {
+ 	height: 0;
+	opacity: 0;
+  box-sizing: border-box;
+	background: rgba(0, 47, 77, .25);
+	position: fixed;
+	top: 70px;
+	width: 100%;
+  transition: all 3s;
+}
+
+.open-menu ~ nav {
+	opacity: 1;
+ 	padding: 80px 0;
+	z-index: 15;
+	height: calc(90vh - 70px);
+}
+
+nav ul {
+	padding: 0 10px;
+	display: flex;
+}
+
+nav li {
+	flex: 1;
+}
+
+nav li a {
+	font-family: "華康粗圓體(P)";
+	font-size: 2em;
+	display: block;
+	padding: 30px;
+	text-align: center;
+	transition: background .3s;
+}
+
+nav li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
+	background: #962D3E;
+}
+
+nav li:nth-child(even) a {
+	background: #aa3346;
+}
+
+nav li:nth-child(odd) a:hover {
+	background: #9e2f41;
+}
+
+nav li:nth-child(even) a:hover {
+	background: #c53c52;
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+  background: #453659;
+}
+  
+
+
+/* SECTION STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+section { 
+	text-align: center;
+  /*background: url('https://unsplash.it/1910/1221?image=626') no-repeat center / cover;*/
+}
+
+/*button css*/
+.botton{
+	margin: 0;
+	padding: 0;
+	height: 35vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.btn1{
+	font-family:"華康粗圓體(P)";
+	font-size: 50px;
+	background-color: #3A706F;
+	width:550px ;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow,transform;
+	transition-property: box-shadow,transform;
+}
+.btn1:hover,.btn1:focus,.btn1:active{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/*button02 css*/
+.botton02{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+}
+
+.btn02{
+	font-family:"華康粗圓體(P)";
+	font-size: 40px;
+	background-color: #3A706F;
+	width:650px ;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow,transform;
+	transition-property: box-shadow,transform;
+}
+.btn02:hover,.btn02:focus,.btn02:active{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+h3 {
+	font-weight: 300;
+	font-size: 2.8em;
+	font-family:"華康細圓體(P)"; 
+}
+
+h1{
+    position: absolute;
+    top:5px;
+  }
+
+h6{
+    position: absolute;
+    top:500px;
+    left: 25px;
+  }
+
+h2 {
+	text-transform: lowercase;
+	font-size: 2em;
+	font-family:"華康細圓體(P)"; 
+}
+h4 {
+	text-transform: lowercase;
+	font-size: 1em;
+	font-family: "華康細圓體(P)";
+}
+h5 {
+	position: absolute;
+	font-size: 5em;
+	font-family:"華康細圓體(P)"; 
+	
+}
+/* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+	background: white;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+	width: 16px;
+	height: 16px;
+	margin: -8px 0 0 -8px;
+	background: transparent;
+	box-sizing: border-box;
+	border: 1px solid #24221F;
+}
+
+
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 767px) {
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav li {
+		margin-top: 1px;
+	}
+  
+  nav li a {
+    font-size: 1.5em;
+  }
+  
+  .scroll-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .open-menu ~ nav {
+		padding: 20px 0;
+	}
+
+	nav li a {
+		padding: 3px;
+	}
+}
+/*page01 card css*/
+.card{
+	width: 300px;
+	height: 400px;
+	position: relative;
+	perspective: 1000px;
+}
+.cover,.back{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	transition: transform.25s ease-in-out ;
+}
+.cover{
+	transform: rotateY(0deg);
+}
+.card:hover .cover{
+	transform: rotateY(180deg);
+}
+.back{
+	transform: rotateY(-180deg);
+}
+.card:hover .back{
+	transform: rotateY(0deg);
+}
+
+.card01{
+	width: 300px;
+	height: 400px;
+	position: relative;
+	perspective: 1000px;
+}
+.cover01,.back01{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	transition: transform.25s ease-in-out ;
+}
+.cover01{
+	transform: rotateY(0deg);
+}
+.card01:hover .cover01{
+	transform: rotateY(180deg);
+}
+.back01{
+	transform: rotateY(-180deg);
+}
+.card01:hover .back01{
+	transform: rotateY(0deg);
+}
+
+.card02{
+	width: 300px;
+	height: 400px;
+	position: relative;
+	perspective: 1000px;
+}
+.cover02,.back02{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	transition: transform.25s ease-in-out ;
+}
+.cover02{
+	transform: rotateY(0deg);
+}
+.card02:hover .cover02{
+	transform: rotateY(180deg);
+}
+.back02{
+	transform: rotateY(-180deg);
+}
+.card02:hover .back02{
+	transform: rotateY(0deg);
+}
+
+/*page02 div css*/
+
+.flash{
+	width: 250px;
+	height: 100px;
+	/*background-color:#F9FFD0;*/
+	position: absolute;
+	top: 35%;
+	left: 40.5%;
+}
+.flash:hover{
+	border: 10px solid #D01100;
+	opacity:0.6;
+	transition: 1s;
+}
+.makeup{
+	width: 380px;
+	height: 100px;
+	/*background-color: #FFE38B;*/
+	position: absolute;
+	top: 36%;
+	left: 64.5%;
+}
+.makeup:hover{
+	border: 10px solid #D01100;
+	opacity:0.6;
+	transition: 1s;
+}
+#flashimg{
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	display: none;
+}
+#flashimg img{
+	width: 570px;
+	height: 275px;
+}
+#makeupimg{
+	position: absolute;
+	top: 10%;
+	left: 60%;
+	display: none;
+}
+#makeupimg img{
+	width: 400px;
+	height: 270px;
+}
+
+.point{
+	width: 150px;
+  height: 180px;
+  transition: transform .2s;
+}
+.point:hover {
+	transform: scale(1.1); 
+}
+	
+
+ 
+  .page01 {
+	position: absolute;
+	top: 70px;
+	left: 675px;
+	background-image: url(image/1x/window.png);
+	width: 650px;
+	height: 590px;
+	z-index: 999;
+	padding-top: 60px;
+	padding-left: 70px;
+	padding-right: 70px;
+  }
+  .what {
+	margin-top: 15px;
+	font-size:20px ;
+	font-family:"華康粗圓體(P)"; 
+   }
+   .what01{
+	font-size:20px ;
+	font-family:"華康粗圓體(P)";
+     }   
+  .x_btn{ position: absolute; top:10px; right:10px; cursor:pointer; z-index: 10000}
+
+  .page02 {
+	position: absolute;
+	top: 80px;
+	left: 620px;
+	background-image: url(image/1x/window-2.png) ;
+	width: 375px;
+	height: 150px;
+	z-index: 999;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size:18px ;
+	font-family:"華康粗圓體(P)";
+	color: #2A3040;
+	text-align:left;
+	line-height:180%;
+  }
+  .why { top: -100px;
+	left: 620px;
+	 }
+  .x_btn02{ position: absolute; top:10px; right:10px; cursor:pointer; z-index: 10000}
+
+
+/*page03 div css*/
+
+  .page03 {
+	position: absolute;
+	top: 15%;
+	left: 60%;
+	background-image: url(image/1x/page03.png);
+	width: 400px;
+	height: 450px;
+	z-index: 999;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+  }
+  .IS { 
+	margin-top: 15px;
+	font-size:21px ;
+	font-family:"華康粗圓體(P)"; 
+    }
+  .x_btn03{ position: absolute; top:10px; right:10px; cursor:pointer; z-index: 10000}
+
+  .word{
+	text-align:left;
+	line-height:150%;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 25%;
+	left: 7%;
+  }
+
+  p{
+	font-family:"華康細圓體(P)"; 
+	font-size: 20px;
+  }
+
+
+.img-slider{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100vh;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	position: relative;
+	width: 850px;
+	height: 600px;
+	margin: 10px;
+	
+}
+
+.img-slider .slide{
+	z-index: 1;
+	position: absolute;
+	top: 15%;
+	left: 70%;
+	clip-path: circle(0% at 0 50%);
+
+}
+
+.img-slider .slide.active{
+	clip-path: circle(150% at 0 50%);
+	transition: 2s;
+	transition-property: clip-path;
+
+
+}
+
+.img-slider .slide img{
+	z-index: 1;
+	border-radius: 5px;
+
+}
+
+.img-slider .slide .info{
+	position: absolute;
+	top: -10%;
+	left: -35%;
+	padding: 15px 30px
+}
+
+.img-slider .slide .info h3{
+color: rgb(255, 255, 255);
+font-size: 40px;
+text-transform: uppercase;
+font-weight: 800;
+letter-spacing: 2px;
+text-align: left;
+}
+
+.img-slider .slide .info p{
+	color: rgb(255, 255, 255);
+	background:rgba(58, 112, 111, 0.6);
+	font-size: 20px;
+	width: 60%;
+	padding: 10px;
+	border-radius: 4px;
+	text-align: left;
+	line-height:150%
+	}
+
+.img-slider .navigation{
+	z-index: 2;
+	position: absolute;
+	display: flex;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn{
+	background: rgba(255, 255, 255, 0.5);
+	width: 12px;
+	height: 12px;
+	margin: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	left: -200px;
+	top: -300px;
+}
+
+.img-slider .navigation .btn.active{
+	background-color: #395164;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/*page04 div css*/
+
+.banner{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.banner .imgBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.banner .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: 0.5s;
+	background-position: center;
+}
+
+.banner .imgBx img.active{
+	opacity: 1;
+}
+
+.controls{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	width: 80px;
+}
+
+.controls li{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.controls li:hover{
+	background: #7FA3BB;
+}
+
+.controls li:before{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-left: 3px solid #111;
+	border-bottom: 3px solid #111;
+	transform: rotate(45deg);
+}
+
+.controls li:nth-child(2):before{
+	transform: rotate(225deg);
+}
+
+.pupu{
+	position: absolute;
+	left: 450px;
+	top: 150px;
+	text-align: center;
+	color: #314656;
+	font-size: 11px;
+}
+.pupu p{
+	font-size: 26px;
+	line-height:140%
+}
+.pupu h5{
+	position: absolute;
+	left: 115px;
+}
